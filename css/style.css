@@ -83,7 +83,7 @@ header div .login{
     color: black;
     border: 1pz solid white;
     border-radius: 40px;
-    padding: 7px 20px;
+    padding: 10px 20px;
     background-color: white;
     cursor: pointer;
 }
@@ -134,7 +134,11 @@ header div .login{
 .dowloader{
     display: flex;
     flex-direction: row;
-    justify-content: center;    
+    justify-content: center; }
+
+
+.down{   
+    cursor: pointer;
 }
 
 .downloader, .mac-download {
@@ -143,7 +147,7 @@ header div .login{
     padding: 7px 20px;
     background-color: white;
     color: black;
-    margin-right: 1.5em;   
+    margin-right: 1.5em;
 }
 
 
@@ -175,13 +179,14 @@ main .big-one{
     text-align: center;
 }
 
-
 .question{
-    background-image: url("img/stars.svg");
+    background-image: url("../img/stars.svg");
     background-size: cover;
     margin: 2rem;
+    line-height: 3rem;
+    width: 45%;
     text-align: center;
-
+    font-size: 1.5rem;
 }
 
 .last-big-sec .mac-download{
@@ -189,7 +194,10 @@ main .big-one{
     color: white;
 }
 
-section .big-img-box img {
+.big-img-box img{   /* per ingrandire l'immagine nel box al 100% dell capienza */
+    width: 100%;
+}
+.big-img-box { 
     width: 100%;
 }
 
