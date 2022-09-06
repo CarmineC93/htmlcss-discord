@@ -47,13 +47,11 @@ section .what-discord-do{
     font-size: 2.7rem;
     margin-bottom: 2rem;
     line-height: 3rem;
-    
 }
 
 .grey{
     background-color: rgb(228, 228, 228);
 }
-
 
 .pointer{   
     cursor: pointer;
@@ -158,22 +156,16 @@ header div .login{
     margin-right: 1.5em ;
 }
 
-
 /* last big section */
-
-.last-big-sec{
-    background-color:  rgb(228, 228, 228);    
-    /* padding: 3rem; */
-}
 
 main .big-one{
     width: 100%;
     flex-direction: column;
 }
 
-.big-one .what-discord-do{
+.big-one > .what-discord-do{
     padding: 0;
-    width: 63%;
+    width: 100%;    /* impostata perchè altrimenti prenderebbe la larghezza 35% dei box doppi di classe .what-discord-do*/
     text-align: center;
 }
 
@@ -194,21 +186,20 @@ main .big-one{
     font-size: 1.2em;
 }
 
-.big-img-box img{   /* per ingrandire l'immagine nel box al 100% dell capienza */
+.big-img-box img{   
     width: 100%;
 }
+                     /* in questo caso per adattare l'immagine nel box al 100% dell capienza dare width 100% oltre all'immagine anche al div */
 .big-img-box { 
     width: 100%;
 }
 
-
 /* FOOTER */
+
 /* Main footer */
 
 footer{
-              /* DEBUG  !!!!!!!!!!!!!!!! */   
     background-color: rgb(41, 41, 41);
-    height: 800px; 
     color: white;
     padding: 1rem;
     display: flex;
@@ -220,6 +211,7 @@ footer .footer-menu{
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
+    align-items: flex-start;
 }
 
 footer .social-link{
@@ -235,7 +227,7 @@ footer .social-link{
     margin-right: 8px;
 }
 
-h2{
+footer h2{
     color: rgb(103, 120, 172);
     font-size: 2.5em;
     padding: 0.4em 0;
@@ -292,9 +284,32 @@ footer .sign-in{
 }
 
 
+/* decoration wave */
 
 
+.wave, .wave-rotate{
+    /* debug */
+    height: 100px;
+    background-image: url("../img/wave.svg");
+    fill:rgb(228, 228, 228);
+}
+
+.wave-rotate{
+    transform: scaleY(-1);
+}
 
 
+/* .grey::before{
+     content: url("../img/wave.svg");
+     width: 100%;
+    max-width: 1200px; 
+    height: 200px;
+    background-color:rgb(228, 228, 228);
+    background-image: 
+}  
 
-
+.wave-rotate::after{
+    content: url("../img/wave.svg");
+    width: 100%;
+    transform: rotateX(180deg);
+} */
