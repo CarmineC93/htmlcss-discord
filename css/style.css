@@ -71,7 +71,7 @@ header{
 }
 
 header .logo{
-    padding: 10px;  /* questo padding regola il div contenente logo,menu,button; usando poi align-items:center sulla lista si allinea tutto il div in base all'altezza  */
+    padding: 10px;  /*questo padding regola il div contenente logo,menu,button; usando poi align-items:center sulla lista si allinea tutto il div in base all'altezza  */
     width: 11%;
 }
 
@@ -118,7 +118,6 @@ header div .login{
     display: flex;
     flex-direction: column;
     line-height: 2em;
-
 }
 
 .jumbotron h1{
@@ -134,8 +133,8 @@ header div .login{
 .dowloader{
     display: flex;
     flex-direction: row;
-    justify-content: center; }
-
+    justify-content: center; 
+}
 
 .downloader, .mac-download {
     width: 15em;
@@ -145,7 +144,6 @@ header div .login{
     color: black;
     margin-right: 1.5em;
 }
-
 
 .downloader, .from-browser {
     width: 15em;
@@ -258,9 +256,10 @@ footer .ft{
     height: 100%;
 }
 
-.social-icon{
-    display: flex;
-    row-gap: 1.5 rem;  /* perche non prende il gap? */
+.social-icon i {
+    padding: 5px ;
+    /* display: flex;
+    row-gap: 1.5 rem;  perche non prende il gap su classe social-link? */
 }
 
 /* white line divisor */
@@ -288,8 +287,7 @@ footer .sign-in{
 
 
 .wave, .wave-rotate{
-    /* debug */
-    height: 100px;
+    height: 8rem;
     background-image: url("../img/wave.svg");
     }
 
