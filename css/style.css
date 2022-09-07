@@ -35,7 +35,8 @@ section .img-box{
 }
 
 main img{
-    width: 80%;
+    /* width: 80%; */
+    max-width: 100%;  /* max-width più consigliabile come impostazione di base, poi potrà essere sovrascritto su casi specifici da width*/
 }
 
 section .what-discord-do{
@@ -71,7 +72,7 @@ header{
 }
 
 header .logo{
-    padding: 10px;  /*questo padding regola il div contenente logo,menu,button; usando poi align-items:center sulla lista si allinea tutto il div in base all'altezza  */
+    padding: 10px;  /*questo padding regola il div contenente logo,menu,button; usando poi align-items:center sulla lista si allinea tutto il div in base all'altezza, perchè c'è justify-content: streach; di default!! */
     width: 11%;
 }
 
@@ -104,6 +105,7 @@ header div .login{
     padding: 6.5em 0;
     background-image: url("../img/jumbo.png");
     background-size: cover; 
+    background-position: bottom;  /*così si vedrà sempre dalla base dell'img*/
     background-color: #255EE9;
     display: flex;
     justify-content: center;
@@ -169,10 +171,11 @@ main .big-one{
 
 .question{
     background-image: url("../img/stars.svg");
-    background-size: cover;
+    background-size: contain;   /* in questo caso contain è più adaptive di cover, ma dobbiamo specificare no-repeat */
+    background-repeat: no-repeat;
     font-weight: bold;
     margin: 2rem;
-    line-height: 3rem;
+    line-height: 3.1rem;
     width: 45%;
     text-align: center;
     font-size: 1.5rem;
@@ -259,7 +262,7 @@ footer .ft{
 .social-icon i {
     padding: 5px ;
     /* display: flex;
-    row-gap: 1.5 rem;  perche non prende il gap su classe social-link? */
+    row-gap: 1.5 rem;  perche non prende il gap su classe social-git link? */
 }
 
 /* white line divisor */
@@ -271,7 +274,7 @@ footer .for-the-white-line{
 /* registration bar */
 
 footer .bottom-banner{
-    margin-top: 50px;
+    margin: 50px 0 80px 0;
     display: flex;
     justify-content: space-between; 
 }
@@ -282,9 +285,7 @@ footer .sign-in{
     background-color: rgb(103, 120, 172);
 }
 
-
 /* decoration wave */
-
 
 .wave, .wave-rotate{
     height: 8rem;
@@ -295,7 +296,7 @@ footer .sign-in{
     transform: scaleY(-1);
 }
 
-
+/* non funziona con pseudo elementi */
 /* .grey::before{
      content: url("../img/wave.svg");
      width: 100%;
